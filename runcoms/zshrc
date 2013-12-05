@@ -5,6 +5,15 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
 
+export PATH="$HOME/bin:/usr/local/bin:/usr/local/share/npm/bin:$PATH"
+export MANPATH="/usr/local/man:$MANPATH"
+export PYTHONPATH="/usr/local/lib/python:$PYTHONPATH"
+
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Code
+#export VIRTUAL_ENV_DISABLE_PROMPT=1
+source virtualenvwrapper_lazy.sh
+
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
