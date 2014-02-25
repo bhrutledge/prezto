@@ -7,7 +7,6 @@
 
 export PATH="$HOME/bin:/usr/local/bin:/usr/local/share/npm/bin:$PATH"
 export MANPATH="/usr/local/man:$MANPATH"
-export PYTHONPATH="/usr/local/lib/python:$PYTHONPATH"
 
 source $HOME/.zshrc.local 2>/dev/null
 
