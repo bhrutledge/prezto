@@ -5,21 +5,9 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
 
-export PATH="$HOME/bin:/usr/local/bin:$PATH"
-export MANPATH="/usr/local/man:$MANPATH"
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/Code
-
-source $HOME/.zshrc.local 2>/dev/null
-source virtualenvwrapper_lazy.sh
-
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-fi
-
-if [[ -n $TMUX ]]; then
-    export TERM=screen-256color
 fi
 
 # Customize to your needs...
