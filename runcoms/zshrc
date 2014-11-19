@@ -11,3 +11,39 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+# TODO: Is this the write place for exports (esp PATH)?
+export PATH="$HOME/bin:/usr/local/bin:$PATH"
+export MANPATH="/usr/local/man:$MANPATH"
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Code
+
+if [[ -n $TMUX ]]; then
+    export TERM=screen-256color
+fi
+
+# Virtual environments
+
+if which virtualenvwrapper_lazy.sh > /dev/null; then
+    source virtualenvwrapper_lazy.sh
+fi
+
+if which rbenv > /dev/null; then
+    eval "$(rbenv init -)"
+fi
+
+# Aliases
+
+if ls --color -d . >/dev/null 2>&1; then
+    alias ls='ls --color=auto'
+elif ls -G -d . >/dev/null 2>&1; then
+    alias ls='ls -G'
+fi
+
+alias tree='tree -I "*.pyc|__pycache__"'
+
+# Local config
+
+if [[ -f $HOME/.zshrc.local ]]; then
+    source $HOME/.zshrc.local
+fi
