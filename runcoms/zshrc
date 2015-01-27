@@ -24,8 +24,8 @@ fi
 
 # Virtual environments
 
-if which virtualenvwrapper_lazy.sh > /dev/null; then
-    source virtualenvwrapper_lazy.sh
+if which virtualenvwrapper.sh > /dev/null; then
+    source virtualenvwrapper.sh
 fi
 
 if which rbenv > /dev/null; then
