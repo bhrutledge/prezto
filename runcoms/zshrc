@@ -12,24 +12,13 @@ fi
 
 # Customize to your needs...
 
-# TODO: Is this the right place for exports (esp PATH)?
-export PATH="$HOME/bin:$HOME/Dropbox/bin/:$HOME/.local/bin:/usr/local/bin:$PATH"
-export MANPATH="/usr/local/man:$MANPATH"
+# TODO: Is this the write place for exports (esp PATH)?
+export PATH="$HOME/bin:$HOME/Dropbox/bin/:$HOME/.local/bin:$PATH"
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Code
 
 if [[ -n $TMUX ]]; then
     export TERM=screen-256color
-fi
-
-# Virtual environments
-
-if which virtualenvwrapper.sh > /dev/null; then
-    source virtualenvwrapper.sh
-fi
-
-if which rbenv > /dev/null; then
-    eval "$(rbenv init -)"
 fi
 
 # Aliases
@@ -46,4 +35,14 @@ alias tree='tree -I "*.pyc|__pycache__"'
 
 if [[ -f $HOME/.zshrc.local ]]; then
     source $HOME/.zshrc.local
+fi
+
+# Virtual environments
+
+if which virtualenvwrapper.sh > /dev/null; then
+    source virtualenvwrapper.sh
+fi
+
+if which rbenv > /dev/null; then
+    eval "$(rbenv init -)"
 fi
