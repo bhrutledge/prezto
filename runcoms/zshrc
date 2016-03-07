@@ -36,13 +36,3 @@ alias tree='tree -I "*.pyc|__pycache__"'
 if [[ -f $HOME/.zshrc.local ]]; then
     source $HOME/.zshrc.local
 fi
-
-# Virtual environments
-
-if which virtualenvwrapper.sh > /dev/null; then
-    source virtualenvwrapper.sh
-fi
-
-if which rbenv > /dev/null; then
-    eval "$(rbenv init -)"
-fi
