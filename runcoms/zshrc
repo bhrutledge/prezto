@@ -12,15 +12,6 @@ fi
 
 # Customize to your needs...
 
-# TODO: Is this the write place for exports (esp PATH)?
-export PATH="$HOME/bin:$HOME/Dropbox/bin/:$HOME/.local/bin:$PATH"
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/Code
-
-if [[ -n $TMUX ]]; then
-    export TERM=screen-256color
-fi
-
 # Aliases
 
 if ls --color -d . >/dev/null 2>&1; then
