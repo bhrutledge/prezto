@@ -21,6 +21,7 @@ elif ls -G -d . >/dev/null 2>&1; then
 fi
 
 alias tree='tree -I "*.pyc|__pycache__"'
+alias mux='tmuxinator'
 
 # Local config
 

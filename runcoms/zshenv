@@ -9,3 +9,13 @@
 if [[ "$SHLVL" -eq 1 && ! -o LOGIN && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
+
+#
+# Dev Environment
+#
+
+export PROJECT_HOME=$HOME/Code
+
+if [[ -n $TMUX ]]; then
+    export TERM=screen-256color
+fi

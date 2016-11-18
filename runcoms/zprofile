@@ -44,7 +44,7 @@ typeset -gU cdpath fpath mailpath path
 # Set the list of directories that Zsh searches for programs.
 path=(
   $HOME/bin
-  $HOME/Dropbox/bin/
+  $HOME/Dropbox/bin
   $HOME/.local/bin
   /usr/local/{bin,sbin}
   $path
@@ -75,14 +75,3 @@ if [[ ! -d "$TMPDIR" ]]; then
 fi
 
 TMPPREFIX="${TMPDIR%/}/zsh"
-
-#
-# Dev Environment
-#
-
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/Code
-
-if [[ -n $TMUX ]]; then
-    export TERM=screen-256color
-fi
